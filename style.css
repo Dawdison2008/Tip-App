@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root{
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grayish-cyan);
+}
+
+.logo{
+  margin-bottom: 50px;
+}
+
+.component-mobile{
+  width: clamp(300px, 100%, 900px);
+  padding: 25px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+.bill{
+  width: 100%;
+  position: relative;
+}
+
+.dollar-icon{
+  position: absolute;
+  left: 15px;
+  top: 40px;
+}
+
+.title{
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.bill input[type="text"]{
+  width: 100%;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--very-light-grayish-cyan);
+  text-align: right;
+  color: var(--very-dark-cyan);
+  font-size: 24px;
+  font-weight: 700;
+  padding-right: 15px;
+}
+
+.bill input[type="text"]:focus{
+  border: 2px solid var(--strong-cyan)
+}
+
+.tip-selector{
+  width: 100%;
+  margin-top: 25px;
+}
+
+.button-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+button{
+  width: 1fr;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.active{
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.custom{
+  width: 100%;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--very-light-grayish-cyan);
+  text-align: right;
+  color: var(--very-dark-cyan);
+  font-size: 24px;
+  font-weight: 700;
+  padding-right: 15px;
+}
+
+.custom:focus{
+  border: 2px solid var(--strong-cyan)
+}
+
+.num-of-people input[type="text"]{
+  width: 100%;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--very-light-grayish-cyan);
+  text-align: right;
+  color: var(--very-dark-cyan);
+  font-size: 24px;
+  font-weight: 700;
+  padding-right: 15px;
+}
+
+.num-of-people input[type="text"]:focus{
+  border: 2px solid var(--strong-cyan)
+}
+
+.num-of-people{
+  width: 100%;
+  position: relative;
+  margin-top: 25px;
+}
+
+.people-icon{
+  position: absolute;
+  left: 15px;
+  top: 40px;
+}
+
+.result-panel{
+  width: 100%;
+  background-color: var(--very-dark-cyan);
+  border-radius: 15px;
+  margin-top: 25px;
+  padding: 30px 25px 25px 25px;
+}
+
+.tip-amount{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tip-amount-text p{
+  color: var(--white);
+}
+
+.tip-amount-text span{
+  color: var(--grayish-cyan);
+  font-size: 0.8rem;
+}
+
+.cost p{
+  color: var(--strong-cyan);
+  font-size: 2rem;
+}
+
+.total{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.total-text p{
+  color: var(--white);
+}
+
+.total-text span{
+  color: var(--grayish-cyan);
+  font-size: 0.8rem;
+}
+
+.reset{
+  width: 100%;
+  height: 45px;
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  margin-top: 30px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.component-desktop{
+  display: none;
+}
+
+@media screen and (min-width: 1152px) {
+  .component-mobile{
+    display: none;
+  }
+
+  .component-desktop{
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: var(--white);
+    border-radius: 20px;
+  }
+
+  .choice-panel{
+    width: 47.5%;
+  }
+
+  .result-panel{
+    width: 47.5%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

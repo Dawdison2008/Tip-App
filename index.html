@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <script src="index.js" defer></script>
+
+  <div class="container">
+    <div class="logo">
+      <img src="/images/logo.svg" alt="logo">
+    </div>
+    <div class="component-mobile">
+      <div class="choice-panel">
+        <div class="bill">
+          <img class="dollar-icon" src="/images/icon-dollar.svg" alt="icon of dollar">
+          <p class="title">Bill</p>
+          <input type="text" name="" id="">
+        </div>
+        <div class="tip-selector">
+          <p class="title bil">Select Tip %</p>
+          <div class="button-container">
+            <button class="tip per5">5%</button>
+            <button class="tip per10">10%</button>
+            <button class="tip per15">15%</button>
+            <button class="tip per25">25%</button>
+            <button class="tip per50">50%</button>
+            <input type="text" class="custom" placeholder="Custom">
+          </div>
+          <div class="num-of-people">
+            <img class="people-icon" src="/images/icon-person.svg" alt="icon of dollar">
+            <p class="title">Number of people</p>
+            <input type="text" name="" id="">
+          </div>
+        </div>
+      </div>
+      <div class="result-panel">
+        <div class="tip-amount">
+          <div class="tip-amount-text">
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <div class="cost">
+            <p>$4.27</p>
+          </div>
+        </div>
+        <div class="total">
+          <div class="total-text">
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <div class="cost">
+            <p>$32.79</p>
+          </div>
+        </div>
+        <button class="reset">RESET</button>
+      </div>
+    </div>
+    <div class="component-desktop">
+      <div class="choice-panel">
+        <div class="bill">
+          <img class="dollar-icon" src="/images/icon-dollar.svg" alt="icon of dollar">
+          <p class="title">Bill</p>
+          <input type="text" name="" id="">
+        </div>
+        <div class="tip-selector">
+          <p class="title bil">Select Tip %</p>
+          <div class="button-container">
+            <button class="tip per5">5%</button>
+            <button class="tip per10">10%</button>
+            <button class="tip per15">15%</button>
+            <button class="tip per25">25%</button>
+            <button class="tip per50">50%</button>
+            <input type="text" class="custom">
+          </div> 
+          <div class="num-of-people">
+            <img class="people-icon" src="/images/icon-person.svg" alt="icon of dollar">
+              <p class="title">Number of people</p>
+            <input type="text" name="" id="">
+          </div>
+        </div>
+      </div>
+      <div class="result-panel">
+        <div class="result-panel-container">
+          <div class="tip-amount">
+            <div class="tip-amount-text">
+              <p>Tip Amount</p>
+              <span>/ person</span>
+            </div>
+            <div class="cost">
+              <p>$4.27</p>
+            </div>
+          </div>
+          <div class="total">
+            <div class="total-text">
+              <p>Tip Amount</p>
+              <span>/ person</span>
+            </div>
+            <div class="cost">
+              <p>$32.79</p>
+            </div>
+          </div>
+        </div>
+        <button class="reset">RESET</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- custom jako input -->
+  <!-- wsystkie active states -->
+  <!-- buttony w js -->
+
+</body>
+</html>
