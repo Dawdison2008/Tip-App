@@ -31,12 +31,6 @@
   margin-bottom: 50px;
 }
 
-.component-mobile{
-  width: clamp(300px, 100%, 900px);
-  padding: 25px;
-  background-color: var(--white);
-  border-radius: 20px;
-}
 
 .bill{
   width: 100%;
@@ -56,7 +50,7 @@
   margin-bottom: 5px;
 }
 
-.bill input[type="text"]{
+.bill input{
   width: 100%;
   height: 45px;
   outline: none;
@@ -70,7 +64,7 @@
   padding-right: 15px;
 }
 
-.bill input[type="text"]:focus{
+.bill input:focus{
   border: 2px solid var(--strong-cyan)
 }
 
@@ -89,13 +83,18 @@
 button{
   width: 1fr;
   height: 45px;
-  outline: none;
   border: none;
   border-radius: 5px;
   background-color: var(--very-dark-cyan);
   color: var(--white);
   font-size: 24px;
   font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+  transition: .3s ease-in;
 }
 
 .active{
@@ -121,7 +120,7 @@ button{
   border: 2px solid var(--strong-cyan)
 }
 
-.num-of-people input[type="text"]{
+.num-of-people input{
   width: 100%;
   height: 45px;
   outline: none;
@@ -135,7 +134,7 @@ button{
   padding-right: 15px;
 }
 
-.num-of-people input[type="text"]:focus{
+.num-of-people input:focus{
   border: 2px solid var(--strong-cyan)
 }
 
@@ -204,18 +203,8 @@ button{
   font-size: 1.3rem;
   font-weight: 700;
 }
-
 .component-desktop{
-  display: none;
-}
-
-@media screen and (min-width: 1152px) {
-  .component-mobile{
-    display: none;
-  }
-
-  .component-desktop{
-    display: block;
+    min-width: 375px;
     display: flex;
     justify-content: space-between;
     padding: 25px;
@@ -223,15 +212,21 @@ button{
     border-radius: 20px;
   }
 
+  @media (max-width: 1100px) {
+    .component-desktop {
+      flex-direction: column;
+      width: 375px;
+    }
+  }
+
   .choice-panel{
-    width: 47.5%;
+    width: 100%;
   }
 
   .result-panel{
-    width: 47.5%;
+    width: 100%;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-}
